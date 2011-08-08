@@ -175,6 +175,9 @@ public class DroidGap extends PhonegapActivity {
     	getWindow().requestFeature(Window.FEATURE_NO_TITLE);
     	getWindow().setFlags(WindowManager.LayoutParams.FLAG_FORCE_NOT_FULLSCREEN,
     			WindowManager.LayoutParams.FLAG_FORCE_NOT_FULLSCREEN);
+    	//This flag keeps the screen on while the app is running
+    	getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+    	
     	// This builds the view.  We could probably get away with NOT having a LinearLayout, but I like having a bucket!
 
     	Display display = getWindowManager().getDefaultDisplay(); 
